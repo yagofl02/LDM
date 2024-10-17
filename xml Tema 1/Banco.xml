@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE banco SYSTEM "Banco.dtd">
+
+<banco>
+    <cuentas>
+        <cuentas_ahorro>
+            <cuenta_ahorro id="a1" interes="0.03">
+                <balance>2500</balance>
+            </cuenta_ahorro>
+            <cuenta_ahorro id="a2" interes="0.03">
+                <balance>15075</balance>
+            </cuenta_ahorro>
+        </cuentas_ahorro>
+        <cuentas_corrientes>
+            <cuenta_corriente id="a3">
+                <balance>4025</balance>
+            </cuenta_corriente>
+            <cuenta_corriente id="a4">
+                <balance>-125</balance>
+            </cuenta_corriente>
+            <cuenta_corriente id="a5">
+                <balance>325</balance>
+            </cuenta_corriente>
+        </cuentas_corrientes>
+    </cuentas>
+    <clientes>
+        <cliente id="c1">
+            <nombre>Juan García</nombre>
+            <direccion>Gijón</direccion>
+        </cliente>
+        <cliente id="c2">
+            <nombre>Manuel Sánchez</nombre>
+            <direccion>Oviedo</direccion>
+            <telefono>612213321</telefono>
+        </cliente>
+        <cliente id="c3">
+            <nombre>Fernando Villa</nombre>
+            <direccion>Avilés</direccion>
+        </cliente>
+    </clientes>
+    <clientes_cuentas>
+        <cliente_cuenta cli_id="c1" cta_id="a2" />
+        <cliente_cuenta cli_id="c1" cta_id="a3" />
+        <cliente_cuenta cli_id="c2" cta_id="a4" />
+        <cliente_cuenta cli_id="c3" cta_id="a1" />
+        <cliente_cuenta cli_id="c3" cta_id="a5" />
+    </clientes_cuentas>
+</banco>

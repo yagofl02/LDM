@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pinturas SYSTEM "pinturas.dtd" > 
+<pinturas>
+    <cuadro año="1907">
+        <título>El beso</título>
+        <pintor>
+            <nombre>Gustav Klimit</nombre>
+            <año>1862</año>
+        </pintor>
+        <estilo>simbolismo</estilo>
+        <técnica>óleo</técnica>
+        <tamaño>180x180</tamaño>
+    </cuadro>
+    <cuadro año="1871">
+        <título>La clase de danza</título>
+        <pintor>
+            <nombre>Edgar Degas</nombre>
+            <año>1874</año>
+        </pintor>
+        <estilo>impresionismo</estilo>
+        <técnica>óleo</técnica>
+        <tamaño>83,5x77,2</tamaño>
+    </cuadro>
+</pinturas> 

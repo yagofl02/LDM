@@ -1,0 +1,6 @@
+<!ELEMENT examenes (materia+)>
+<!ELEMENT materia (nombre,aprobados,unidades,suspensos?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT aprobados (#PCDATA)>
+<!ELEMENT unidades (#PCDATA)>
+<!ELEMENT suspensos (#PCDATA)>

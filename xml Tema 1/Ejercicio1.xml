@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE exámenes SYSTEM "examenes.dtd" > 
+
+<examenes>
+    <materia>
+        <nombre>Lenguaje de marcas</nombre>
+        <aprobados>15</aprobados>
+        <unidades>4</unidades>
+
+    </materia>
+    <materia>
+        <nombre>sistemas operativos</nombre>
+        <aprobados>5</aprobados>
+        <suspensos>20</suspensos>
+        <unidades>5</unidades>
+    </materia>
+    <materia>
+        <nombre>ZZ</nombre>
+        <aprobados>3</aprobados>
+        <suspensos>22</suspensos>
+        <unidades>8</unidades>
+    </materia>
+</examenes>

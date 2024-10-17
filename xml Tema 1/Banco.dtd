@@ -1,0 +1,20 @@
+<!ELEMENT banco (cuentas,clientes,clientes_cuentas)>
+<!ELEMENT cuentas (cuentas_ahorro,cuentas_corrientes)>
+<!ELEMENT cuentas_ahorro (cuenta_ahorro+)>
+<!ELEMENT cuenta_ahorro (balance)>
+<!ATTLIST cuenta_ahorro id NMTOKEN #REQUIRED>
+<!ATTLIST cuenta_ahorro interes NMTOKEN #REQUIRED>
+<!ELEMENT balance (#PCDATA)>
+<!ELEMENT cuentas_corrientes (cuenta_corriente+)>
+<!ELEMENT cuenta_corriente (balance)>
+<!ATTLIST cuenta_corriente id NMTOKEN #REQUIRED>
+<!ELEMENT clientes (cliente+)>
+<!ELEMENT cliente (nombre,direccion,telefono?)>
+<!ATTLIST cliente id NMTOKEN #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT clientes_cuentas (cliente_cuenta+)>
+<!ELEMENT cliente_cuenta EMPTY>
+<!ATTLIST cliente_cuenta cli_id NMTOKEN #REQUIRED>
+<!ATTLIST cliente_cuenta cta_id NMTOKEN #REQUIRED>

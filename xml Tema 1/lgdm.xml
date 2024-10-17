@@ -1,0 +1,8 @@
+<facturacion> 
+ <factura id="501"> 
+  <fecha>01/01/2010</fecha> 
+</factura> 
+ <factura id="502"> 
+   <fecha>01/01/2010</fecha> 
+  </factura> 
+</facturacion> 

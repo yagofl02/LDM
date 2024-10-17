@@ -1,0 +1,10 @@
+<!ELEMENT pinturas (cuadro+)>
+<!ELEMENT cuadro (título,pintor,estilo,técnica,tamaño)>
+<!ATTLIST cuadro año NMTOKEN #REQUIRED>
+<!ELEMENT título (#PCDATA)>
+<!ELEMENT pintor (nombre,año)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT año (#PCDATA)>
+<!ELEMENT estilo (#PCDATA)>
+<!ELEMENT técnica (#PCDATA)>
+<!ELEMENT tamaño (#PCDATA)>

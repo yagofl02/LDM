@@ -1,0 +1,12 @@
+<!ELEMENT vivero (especie+)>
+<!ELEMENT especie (nombre,precio,variedad,origen,color_fruto+,otros_datos)>
+<!ATTLIST especie siembra NMTOKEN #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ATTLIST precio moneda NMTOKEN #REQUIRED>
+<!ELEMENT variedad (#PCDATA)>
+<!ELEMENT origen (#PCDATA)>
+<!ELEMENT otros_datos (maduración,riego)>
+<!ELEMENT riego (#PCDATA)>
+<!ELEMENT color_fruto (#PCDATA)>
+<!ELEMENT maduración (#PCDATA)>

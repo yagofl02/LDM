@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tabla [
+<!ELEMENT tabla (nombre)>
+<!ELEMENT nombre (#PCDATA|nombre|simbolo)*>
+<!ATTLIST nombre id NMTOKEN #IMPLIED>
+<!ELEMENT simbolo (#PCDATA|simbolo|numeroatomico)*>
+<!ATTLIST simbolo id NMTOKEN #IMPLIED>
+<!ELEMENT numeroatomico (#PCDATA|numeroatomico|pesoatomico)*>
+<!ELEMENT pesoatomico (#PCDATA|pesoatomico|puntodeebullicion)*>
+<!ELEMENT puntodeebullicion (#PCDATA|puntodeebullicion|densidad)*>
+<!ELEMENT densidad (#PCDATA|densidad)*>
+]>
+
+<tabla>
+    <nombre>
+        <nombre id="hidrogeno">
+            <nombre id = "helio">
+
+            </nombre>
+
+        </nombre>
+        <simbolo>
+            <simbolo id="H">
+                <simbolo id = "He">
+
+                </simbolo>
+
+            </simbolo>
+
+            <numeroatomico>
+                <numeroatomico> 1 </numeroatomico>
+                <numeroatomico> 2 </numeroatomico>
+                <pesoatomico>
+                    <pesoatomico> 1.00797 </pesoatomico>
+                    <pesoatomico> 4.00260 </pesoatomico>
+                    <puntodeebullicion>
+
+                        <puntodeebullicion> 20.46 </puntodeebullicion>
+                        <puntodeebullicion> 4.26 </puntodeebullicion>
+
+                        <densidad>
+                            <densidad> 0.009 g/cm3 </densidad>
+                            <densidad> 0.18 </densidad>
+
+                        </densidad>
+                    </puntodeebullicion>
+                </pesoatomico>
+
+            </numeroatomico>
+        </simbolo>
+
+    </nombre>
+
+</tabla>
