@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<!DOCTYPE horario SYSTEM "Horarioformato.dtd">
+<horario>
+    <modulo codigo="1234">
+        <titulo>Endes </titulo>
+        <profesor>Fonsi</profesor>
+        <periodo dia="Lunes" hora="16:00" longitud="2"/>
+    </modulo>
+    <modulo codigo="9099">
+        <titulo>IPEI</titulo>
+        <profesor>Gema</profesor>
+        <periodo dia="Lunes" hora="18:00" longitud="2"/>
+    </modulo>
+    <modulo codigo="7778">
+        <titulo>PROGR</titulo>
+        <profesor>Julio</profesor>
+        <periodo dia="Lunes" hora="20:00" longitud="2"/>
+    </modulo>
+    <modulo codigo="7778">
+        <titulo>PROGR</titulo>
+        <profesor>Julio</profesor>
+        <periodo dia="Martes" hora="16:00" longitud="2"/>
+    </modulo>
+    <modulo codigo="8888">
+        <titulo>IP</titulo>
+        <profesor>Pilar</profesor>
+        <periodo dia="Martes" hora="18:00" longitud="2"/>
+    </modulo>
+    <modulo codigo="4546">
+        <titulo>BADAT</titulo>
+        <profesor>Fonsi</profesor>
+        <periodo dia="Martes" hora="20:00" longitud="2"/>
+    </modulo>
+    <modulo codigo="6756">
+        <titulo>LMSGI</titulo>
+        <profesor>Julio</profesor>
+        <periodo dia="Miercoles" hora="16:00" longitud="1"/>
+    </modulo>
+    <modulo codigo="7778">
+        <titulo>PROGR </titulo>
+        <profesor>Julio</profesor>
+        <periodo dia="Miercoles" hora="16:00" longitud="1"/>
+    </modulo>
+    <modulo codigo="2323">
+        <titulo>SISIN</titulo>
+        <profesor>Faustino</profesor>
+        <periodo dia="Miercoles" hora="18:00" longitud="2"/>
+    </modulo>
+    <modulo codigo="9099">
+        <titulo>IPEI</titulo>
+        <profesor>Gema</profesor>
+        <periodo dia="Miercoles" hora="20:00" longitud="1"/>
+    </modulo>
+    <modulo codigo="6734">
+        <titulo>PIDMI</titulo>
+        <profesor>Fonsi</profesor>
+        <periodo dia="Miercoles" hora="21:00" longitud="1"/>
+    </modulo>
+    <modulo codigo="6756">
+        <titulo>LMGSI</titulo>
+        <profesor>Julio</profesor>
+        <periodo dia="Jueves" hora="16:00" longitud="2"/>
+    </modulo>
+    <modulo codigo="4546">
+        <titulo>BADAT</titulo>
+        <profesor>Fonsi</profesor>
+        <periodo dia="Jueves" hora="18:00" longitud="1"/>
+    </modulo>
+    <modulo codigo="5555">
+        <titulo>DASP</titulo>
+        <profesor>Gonzalo</profesor>
+        <periodo dia="Jueves" hora="19:00" longitud="1"/>
+    </modulo>
+    <modulo codigo="7778">
+        <titulo>PROGR</titulo>
+        <profesor>Julio</profesor>
+        <periodo dia="Jueves" hora="20:00" longitud="2"/>
+    </modulo>
+    <modulo codigo="7786">
+        <titulo>SASP</titulo>
+        <profesor>Gonzalo</profesor>
+        <periodo dia="Viernes" hora="16:00" longitud="1"/>
+    </modulo>
+    <modulo codigo="1234">
+        <titulo>ENDES</titulo>
+        <profesor>Fonsi</profesor>
+        <periodo dia="Viernes" hora="17:00" longitud="1"/>
+    </modulo>
+    <modulo codigo="2323">
+        <titulo>SiSIN</titulo>
+        <profesor>Faustino</profesor>
+        <periodo dia="Viernes" hora="18:00" longitud="2"/>
+    </modulo>
+    <modulo codigo="4546">
+        <titulo>BADAT</titulo>
+        <profesor>Fonsi</profesor>
+        <periodo dia="Viernes" hora="20:00" longitud="2"/>
+    </modulo>
+</horario>

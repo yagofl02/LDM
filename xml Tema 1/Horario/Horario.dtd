@@ -1,0 +1,9 @@
+<!ELEMENT horario (modulo+)>
+<!ELEMENT modulo (titulo,profesor,periodo,modulo*)>
+<!ATTLIST modulo codigo NMTOKEN #REQUIRED>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT profesor (#PCDATA)>
+<!ELEMENT periodo (dia,hora,longitud)>
+<!ELEMENT dia (#PCDATA)>
+<!ELEMENT hora (#PCDATA)>
+<!ELEMENT longitud (#PCDATA)>
