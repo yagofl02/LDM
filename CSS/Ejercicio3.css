@@ -64,12 +64,12 @@ img {
 
 #contenido {
   float: right;
-  width: 78%;
+  width: 79%;
 }
 
 #contenido #principal {
   float: left;
-  width: 78%;
+  width: 79%;
 }
 
 #contenido #secundario {
@@ -100,7 +100,7 @@ img {
 #contenido #principal .articulo img {
   width: 100px;
   float: left;
-  margin-bottom: 1em;
+  margin-bottom: 0em;
 }
 
 /*-- Pie de página ---------------------------------------------------*/
