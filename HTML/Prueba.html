@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagina Prueba</title>
+</head>
+<body>
+  <script>
+    document.body.style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+
+    let texto = document.createElement('p');
+    texto.textContent = 'Hola Mundo';
+    document.body.appendChild(texto);
+
+    setInterval(() => {
+      texto.style.top = `${Math.random() * 100}px`;
+      texto.style.left = `${Math.random() * 100}px`;
+    }, 100);
+
+    for (let i = 0; i < 10; i++) {
+      let circulo = document.createElement('div');
+      circulo.style.position = 'absolute';
+      circulo.style.borderRadius = '50%';
+      circulo.style.width = `${Math.random() * 100}px`;
+      circulo.style.height = `${Math.random() * 100}px`;
+      circulo.style.top = `${Math.random() * 500}px`;
+      circulo.style.left = `${Math.random() * 500}px`;
+      circulo.style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+      document.body.appendChild(circulo);
+    }
+
+    let textoGirar = document.createElement('p');
+    textoGirar.textContent = 'Hola Mundo';
+    document.body.appendChild(textoGirar);
+
+    setInterval(() => {
+      textoGirar.style.transform = `rotate(${Math.random() * 360}deg)`;
+    }, 100);
+  </script>
+</body>
+</html>                             
