@@ -7,3 +7,4 @@ function calcularFuerzaGravitatoria() {
   const F = G * (m1 * m2) / (d ** 2);
   alert(`La fuerza gravitatoria es de ${F} N`);
 }
+calcularFuerzaGravitatoria();
