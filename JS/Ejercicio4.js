@@ -1,0 +1,9 @@
+function convertirRgbAYiq() {
+  const rojo = parseFloat(prompt("alor del rojo (0-255):"));
+  const verde = parseFloat(prompt("valor del verde (0-255):"));
+  const azul = parseFloat(prompt("valor del azul (0-255):"));
+  const y = 0.299 * rojo + 0.587 * verde + 0.114 * azul;
+  const i = 0.596 * rojo - 0.275 * verde - 0.321 * azul;
+  const q = 0.212 * rojo - 0.528 * verde + 0.311 * azul;
+  alert(`Las componentes son: Y = ${y}, I = ${i}, Q = ${q}`);
+}
