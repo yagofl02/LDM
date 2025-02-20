@@ -1,24 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pagina Prueba</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de Código</title>
 </head>
 <body>
-  <script>
-    function convertirRgbAYiq() {
-      const rojo = parseFloat(prompt("valor del rojo (0-255):"));
-      const verde = parseFloat(prompt("valor del verde (0-255):"));
-      const azul = parseFloat(prompt("valor del azul (0-255):"));
-      const y = 0.299 * rojo + 0.587 * verde + 0.114 * azul;
-      const i = 0.596 * rojo - 0.275 * verde - 0.321 * azul;
-      const q = 0.212 * rojo - 0.528 * verde + 0.311 * azul;
-      const resultado = `Y = ${y}, I = ${i}, Q = ${q}`;
-      alert(resultado);
-      document.title = resultado; 
-    }
-    convertirRgbAYiq(); 
-  </script>
+    <h1>Prueba de Código</h1>
+    <script>
+        let f = function(arr, n) {
+            if (arr === undefined || n === undefined) {
+              return undefined;
+            }
+            if (n < 0) {
+              return [];
+            }
+            if (n >= arr.length) {
+              return arr;
+            }
+            if (n === undefined) {
+              return arr.slice(0, 1);
+            }
+            return arr.slice(0, n);
+          }
+
+    </script>
 </body>
 </html>
