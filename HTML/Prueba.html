@@ -8,22 +8,11 @@
 <body>
     <h1>Prueba de Código</h1>
     <script>
-        let f = function(arr, n) {
-            if (arr === undefined || n === undefined) {
-              return undefined;
-            }
-            if (n < 0) {
-              return [];
-            }
-            if (n >= arr.length) {
-              return arr;
-            }
-            if (n === undefined) {
-              return arr.slice(0, 1);
-            }
-            return arr.slice(0, n);
-          }
-
+      const f = arr => {
+        if (arr === undefined) return undefined;
+        return arr.flat(Infinity);
+    }
+    console.log(f([1, [2, [3, [4, [5, [6]]]]]]));
     </script>
 </body>
 </html>
