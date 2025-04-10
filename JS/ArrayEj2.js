@@ -6,10 +6,10 @@ n y, usando el método slice del objeto Array recibido, retorne:
 • undefined si no recibe ningún parámetro. 
 Ejecuta la función para varios casos de prueba mostrando el resultado retornado.*/
 
-const f = (arr, n) => {
-    if (arr === undefined) return undefined;
-    if (n === undefined) return arr.slice(-1);
-    if (n >= arr.length || n < 0) return arr;
-    return arr.slice(-n);
+const f = (arr, n) => { //funcion que recibe un array y un numero entero
+    if (arr === undefined) return undefined;  //si no recibe ningun parametro devuelve undefined
+    if (n === undefined) return arr.slice(-1); // si no recibe el segundo parametro devuelve el ultimo elemento
+    if (n >= arr.length || n < 0) return arr;// si es mayor o igual que la longitud del array o negativo lo devuelve completo
+    return arr.slice(-n); // si no devuelve los n ultimos elementos
   }
 

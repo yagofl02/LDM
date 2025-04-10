@@ -3,16 +3,16 @@ entero mayor que cero que se pedirá por teclado. */
 
 function calcularSerieHarmonica(n) {
     let suma = 0;
-    for (let i = 1; i <= n; i++) {
+    for (let i = 1; i <= n; i++) { //recorre 
       suma += 1 / i;
     }
     return suma;
   }
   
-  let n = parseInt(prompt("Ingrese un número entero mayor que cero: "));
+  let n = parseInt(prompt(" número entero mayor que cero: ")); // pide un numero menor que 0
   
   while (isNaN(n) || n <= 0) {
-    n = parseInt(prompt("Error. Ingrese un número entero mayor que cero: "));
+    n = parseInt(prompt("Error.  número entero mayor que cero: ")); // si no es menor que 0 vuelve a pedirlo
   }
   
   let suma = calcularSerieHarmonica(n);

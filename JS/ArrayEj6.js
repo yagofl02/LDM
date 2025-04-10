@@ -3,6 +3,6 @@ retornando el resultado de almacenar todos sus elementos en un nuevo array
 unidimensional.*/
 
 const f = arr => {
-    if (arr === undefined) return undefined;
-    return arr.flat(Infinity);
+    if (arr === undefined) return undefined; //si no recibe parametros devuelve undefined
+    return arr.flat(Infinity); //devuelve el array flat
 }

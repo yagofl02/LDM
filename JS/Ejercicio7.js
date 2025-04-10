@@ -11,12 +11,12 @@ temperatura que desea convertir indicando la unidad elegida.
 
 
 function convertirTemperatura(tipoConversion) {
-    let temperatura = parseFloat(prompt("Introduce la temperatura a convertir:"));
+    let temperatura = parseFloat(prompt("Introduce la temperatura a convertir:"));  //pide la temperatura
     let resultado;
-    if (tipoConversion === "Celsius a Fahrenheit") {
-        resultado = (temperatura * 9 / 5) + 32;
+    if (tipoConversion === "Celsius a Fahrenheit") { //conversion si es celsius a fahrenheit
+        resultado = (temperatura * 9 / 5) + 32; // resutlado
     } else {
-        resultado = (temperatura - 32) * 5 / 9;
+        resultado = (temperatura - 32) * 5 / 9; // resultado y es al reves 
     }
-    alert(`El resultado de la conversión es ${resultado.toFixed(3)}`);
+    alert(`El resultado de la conversión es ${resultado.toFixed(3)}`); // muestra por pantalla el resultado
 }

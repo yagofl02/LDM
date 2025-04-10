@@ -5,33 +5,33 @@ espacios en blanco y que, de ser así, estos no aparecerán en el resultado.*/
 
 const readline = require('readline');
 
-const rl = readline.createInterface({
+const rl = readline.createInterface({ //crea un interfaz para leer la linea
     input: process.stdin,
     output: process.stdout
 });
+ 
+rl.question('introduce un nombre: ', (nombre) => { // pregunta para poner el nombre
 
-rl.question('introduce un nombre: ', (nombre) => {
-
-    const nombreSinEspacios = nombre.trim();
+    const nombreSinEspacios = nombre.trim(); // le quita los espacios
 
 
-    const resultado = sustituirCaracteresCentrales(nombreSinEspacios);
+    const resultado = sustituirCaracteresCentrales(nombreSinEspacios); //crea una variable con los resultados
 
-    console.log(resultado);
+    console.log(resultado);//muestra el resultado
 
     rl.close();
 });
 
-function sustituirCaracteresCentrales(nombre) {
+function sustituirCaracteresCentrales(nombre) { //funcion para sustitur
     if (nombre.length <= 2) {
         return nombre;
     }
 
-    const primerCaracter = nombre[0];
-    const ultimoCaracter = nombre[nombre.length - 1];
-    const asteriscos = '*'.repeat(nombre.length - 2);
+    const primerCaracter = nombre[0]; //primer caracter
+    const ultimoCaracter = nombre[nombre.length - 1]; //ultimo
+    const asteriscos = '*'.repeat(nombre.length - 2); //los del medio que se sustituyen por asteriscos
 
-    return `{primerCaracter}${asteriscos}${ultimoCaracter}`;
+    return `{primerCaracter}${asteriscos}${ultimoCaracter}`; //devuelve el resutado
 }
 
 

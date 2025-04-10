@@ -5,7 +5,7 @@ function esPrimo(num) {
     if (num <= 1) {
       return false;
     }
-    for (let i = 2; i <= Math.sqrt(num); i++) {
+    for (let i = 2; i <= Math.sqrt(num); i++) { // comprueba que el numero sea primo
       if (num % i === 0) {
         return false;
       }
@@ -13,11 +13,11 @@ function esPrimo(num) {
     return true;
   }
   
-  let num1 = parseInt(prompt('Ingrese el primer número entero: '));
-  let num2 = parseInt(prompt('Ingrese el segundo número entero: '));
+  let num1 = parseInt(prompt('  primer número entero: ')); //
+  let num2 = parseInt(prompt('Segundo número entero: '));
   
   if (isNaN(num1) || isNaN(num2)) {
-    alert('Error: Los números ingresados no son enteros.');
+    alert('Error: Los números  no son enteros.');
   } else if (num1 > num2) {
     alert('Error: El primer número debe ser menor que el segundo.');
   } else {

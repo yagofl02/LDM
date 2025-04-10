@@ -8,11 +8,11 @@ almacenado en d entre el valor almacenado en c.
 • Almacenar en una variable f el resultado parcial que se obtiene de la operación 
 descrita en el primer punto
 */
-let a = -9;
-let b = 21;
-let c = -35;
-let d = 51;
-let e = 33;
+let a = -9; //variables
+let b = 21; //variables
+let c = -35; //variables
+let d = 51; //variables
+let e = 33; //variables
 
-let f = (a + b) * e;
-let resultado = f / (d % c);
+let f = (a + b) * e; //suma de a y b multiplicado por e
+let resultado = f / (d % c); //resultado de la operacion anterior dividido entre el resto de d entre c
