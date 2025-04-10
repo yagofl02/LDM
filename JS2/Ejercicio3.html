@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de colores</title>
+  <style>
+    body {
+      transition: background-color 0.5s;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lista de colores</h1>
+  <select id="colores">
+    <option value="#FFFFFF">Blanco</option>
+    <option value="#000000">Negro</option>
+    <option value="#FF0000">Rojo</option>
+    <option value="#00FF00">Verde</option>
+    <option value="#0000FF">Azul</option>
+    <option value="#ff2">Amarillo</option>
+    <option value="#f2f">Rosa</option>
+  </select>
+  <script>
+    const select = document.getElementById('colores');
+
+    select.addEventListener('change', () => {
+      const color = select.value;
+      document.body.style.backgroundColor = color;
+    });
+  </script>
+</body>
+</html>
