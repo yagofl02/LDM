@@ -25,26 +25,28 @@
             max-width: 100%;
             max-height: 100%;
         }
+        .controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+        }
         #thumbnails {
             display: flex;
             gap: 10px;
-            overflow-x: auto;
-            max-width: 80%;
-            padding: 10px;
+            width: 300px;
+            overflow: hidden;
         }
         #thumbnails img {
             width: 50px;
             height: 75px;
             cursor: pointer;
             border: 1px solid #ccc;
+            flex-shrink: 0;
         }
         #thumbnails img:hover {
             border-color: #000;
-        }
-        .controls {
-            display: flex;
-            gap: 10px;
-            align-items: center;
         }
     </style>
 </head>
@@ -60,7 +62,6 @@
     </div>
 
     <script>
-        
         const cartas = [
             "naipes/1_heart.svg", "naipes/2_heart.svg", "naipes/3_heart.svg", 
             "naipes/4_heart.svg", "naipes/5_heart.svg", "naipes/6_heart.svg", 
@@ -69,35 +70,49 @@
             "naipes/king_heart.svg"
         ];
 
-        let indiceActual = 0; // Comienza con la primera carta 
+        let indiceActual = 0;
+        let indiceMiniaturas = 0;
 
-        // Cargar miniaturas
         const thumbnailsDiv = document.getElementById("thumbnails");
-        cartas.forEach((carta, index) => {
-            const img = document.createElement("img");
-            img.src = carta;
-            img.alt = carta;
-            img.onclick = () => {
-                indiceActual = index;
-                actualizarCarta();
-            };
-            thumbnailsDiv.appendChild(img);
-        });
 
-        // Función para cambiar la carta principal
+        function actualizarMiniaturas() {
+            thumbnailsDiv.innerHTML = "";
+            const inicio = indiceMiniaturas;
+            const fin = Math.min(inicio + 5, cartas.length);
+
+            for (let i = inicio; i < fin; i++) {
+                const img = document.createElement("img");
+                img.src = cartas[i];
+                img.alt = cartas[i];
+                img.onclick = () => {
+                    indiceActual = i;
+                    actualizarCarta();
+                };
+                thumbnailsDiv.appendChild(img);
+            }
+        }
+
         function cambiarCarta(direccion) {
             indiceActual += direccion;
             if (indiceActual < 0) indiceActual = cartas.length - 1;
             if (indiceActual >= cartas.length) indiceActual = 0;
+
+            const grupoInicio = Math.floor(indiceActual / 5) * 5;
+            if (grupoInicio !== indiceMiniaturas) {
+                indiceMiniaturas = grupoInicio;
+                actualizarMiniaturas();
+            }
+
             actualizarCarta();
         }
 
-        // Función para actualizar la carta principal
         function actualizarCarta() {
             const cartaPrincipal = document.getElementById("carta-principal");
             cartaPrincipal.src = cartas[indiceActual];
             cartaPrincipal.alt = cartas[indiceActual];
         }
+
+        actualizarMiniaturas();
     </script>
 </body>
 </html>
