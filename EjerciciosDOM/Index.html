@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Cartas</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        #carta-container {
+            width: 200px;
+            height: 300px;
+            border: 2px solid black;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+        }
+        #carta-container img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        #thumbnails {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            max-width: 80%;
+            padding: 10px;
+        }
+        #thumbnails img {
+            width: 50px;
+            height: 75px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+        }
+        #thumbnails img:hover {
+            border-color: #000;
+        }
+        .controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Galería de Cartas</h2>
+    <div id="carta-container">
+        <img id="carta-principal" src="naipes/1_heart.svg" alt="Carta principal">
+    </div>
+    <div class="controls">
+        <button onclick="cambiarCarta(-1)">◀</button>
+        <div id="thumbnails"></div>
+        <button onclick="cambiarCarta(1)">▶</button>
+    </div>
+
+    <script>
+        
+        const cartas = [
+            "naipes/1_heart.svg", "naipes/2_heart.svg", "naipes/3_heart.svg", 
+            "naipes/4_heart.svg", "naipes/5_heart.svg", "naipes/6_heart.svg", 
+            "naipes/7_heart.svg", "naipes/8_heart.svg", "naipes/9_heart.svg", 
+            "naipes/10_heart.svg", "naipes/jack_heart.svg", "naipes/queen_heart.svg", 
+            "naipes/king_heart.svg"
+        ];
+
+        let indiceActual = 0; // Comienza con la primera carta 
+
+        // Cargar miniaturas
+        const thumbnailsDiv = document.getElementById("thumbnails");
+        cartas.forEach((carta, index) => {
+            const img = document.createElement("img");
+            img.src = carta;
+            img.alt = carta;
+            img.onclick = () => {
+                indiceActual = index;
+                actualizarCarta();
+            };
+            thumbnailsDiv.appendChild(img);
+        });
+
+        // Función para cambiar la carta principal
+        function cambiarCarta(direccion) {
+            indiceActual += direccion;
+            if (indiceActual < 0) indiceActual = cartas.length - 1;
+            if (indiceActual >= cartas.length) indiceActual = 0;
+            actualizarCarta();
+        }
+
+        // Función para actualizar la carta principal
+        function actualizarCarta() {
+            const cartaPrincipal = document.getElementById("carta-principal");
+            cartaPrincipal.src = cartas[indiceActual];
+            cartaPrincipal.alt = cartas[indiceActual];
+        }
+    </script>
+</body>
+</html>
