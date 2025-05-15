@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de imagen al pasar el ratón</title>
+    <style>
+        /* Estilos básicos para centrar la imagen */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        img {
+            max-width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <img id="miImagen" src="naipes/1_club.svg" alt="Imagen">
+
+    <script>
+        // Selecciona la imagen
+        const imagen = document.getElementById('miImagen');
+
+        // Cambia la imagen al pasar el ratón
+        imagen.addEventListener('mouseover', function() {
+            imagen.src = 'naipes/1_spade.svg'; 
+        });
+
+        // Restaura la imagen original al salir el ratón
+        imagen.addEventListener('mouseout', function() {
+            imagen.src = 'naipes/1_club.svg'; 
+        });
+    </script>
+</body>
+</html>

@@ -41,12 +41,12 @@
         #thumbnails img {
             width: 50px;
             height: 75px;
-            cursor: pointer;
             border: 1px solid #ccc;
             flex-shrink: 0;
         }
-        #thumbnails img:hover {
-            border-color: #000;
+        #thumbnails img.resaltada {
+            border: 2px solid #000;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
@@ -62,13 +62,18 @@
     </div>
 
     <script>
-        const cartas = [
-            "naipes/1_heart.svg", "naipes/2_heart.svg", "naipes/3_heart.svg", 
-            "naipes/4_heart.svg", "naipes/5_heart.svg", "naipes/6_heart.svg", 
-            "naipes/7_heart.svg", "naipes/8_heart.svg", "naipes/9_heart.svg", 
-            "naipes/10_heart.svg", "naipes/jack_heart.svg", "naipes/queen_heart.svg", 
-            "naipes/king_heart.svg"
+        const palos = ["heart", "diamond", "club", "spade"];
+        const valores = [
+            "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+            "jack", "queen", "king"
         ];
+
+        const cartas = [];
+        palos.forEach(palo => {
+            valores.forEach(valor => {
+                cartas.push(`naipes/${valor}_${palo}.svg`);
+            });
+        });
 
         let indiceActual = 0;
         let indiceMiniaturas = 0;
@@ -84,10 +89,9 @@
                 const img = document.createElement("img");
                 img.src = cartas[i];
                 img.alt = cartas[i];
-                img.onclick = () => {
-                    indiceActual = i;
-                    actualizarCarta();
-                };
+                if (i === indiceActual) {
+                    img.classList.add("resaltada");
+                }
                 thumbnailsDiv.appendChild(img);
             }
         }
@@ -100,10 +104,10 @@
             const grupoInicio = Math.floor(indiceActual / 5) * 5;
             if (grupoInicio !== indiceMiniaturas) {
                 indiceMiniaturas = grupoInicio;
-                actualizarMiniaturas();
             }
 
             actualizarCarta();
+            actualizarMiniaturas();
         }
 
         function actualizarCarta() {
